@@ -6,21 +6,21 @@ require_relative "../lib/private_strategy"
 class A12s < Formula
   desc "Agent computers on Docker, declared in one Fleet file"
   homepage "https://github.com/coltonkirsten/a12s"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/coltonkirsten/a12s/releases/download/v0.1.1/a12s_0.1.1_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "7c7c07f5e38bedacce92b106d8837ec9587450470fce21f54add6d08dedcbb9c"
+      url "https://github.com/coltonkirsten/a12s/releases/download/v0.2.0/a12s_0.2.0_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "38743a126cc8aff63e2d0274116b8f01a35f250e870acdb3c8de2b7670fd0277"
 
       define_method(:install) do
         bin.install "a12s"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/coltonkirsten/a12s/releases/download/v0.1.1/a12s_0.1.1_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "49806ae95ccb87a50b71220758a8ba2a7065e87b194b8b1b977bd07710de3c4d"
+      url "https://github.com/coltonkirsten/a12s/releases/download/v0.2.0/a12s_0.2.0_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "f75b4258657906822064064df8ef1efaa2176ca612e881ccbb4e86b032ba528e"
 
       define_method(:install) do
         bin.install "a12s"
@@ -30,15 +30,15 @@ class A12s < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coltonkirsten/a12s/releases/download/v0.1.1/a12s_0.1.1_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "ddaed78a903c6f76505bb37c9abe3080958e487877c872b15a572ac9fb67c69d"
+      url "https://github.com/coltonkirsten/a12s/releases/download/v0.2.0/a12s_0.2.0_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "247ddd186f568742ed69bd4f1c1e6af519a1e58716e12839cb9c44a7d478cf13"
       define_method(:install) do
         bin.install "a12s"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coltonkirsten/a12s/releases/download/v0.1.1/a12s_0.1.1_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "af45cc24d18d337ab2f3ccaf56ea30088f60066f98914096b6b6a2dadeda164e"
+      url "https://github.com/coltonkirsten/a12s/releases/download/v0.2.0/a12s_0.2.0_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "e20442e47d805c27647054f9aa74e4769f4e1e1185b34581b2f80ef4667c1ead"
       define_method(:install) do
         bin.install "a12s"
       end
