@@ -5,21 +5,21 @@
 class A12s < Formula
   desc "Agent computers on Docker, declared in one Fleet file"
   homepage "https://github.com/coltonkirsten/a12s"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/coltonkirsten/a12s/releases/download/v0.4.0/a12s_0.4.0_darwin_amd64.tar.gz"
-      sha256 "d50addc68c627ff296e8e454a3b622259be808f26a2ee9c4915944149e751551"
+      url "https://github.com/coltonkirsten/a12s/releases/download/v0.4.1/a12s_0.4.1_darwin_amd64.tar.gz"
+      sha256 "f682b100418ef7f4f3d4c82374ef1488ffa79c29331bb753f1b1438a486184ad"
 
       define_method(:install) do
         bin.install "a12s"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/coltonkirsten/a12s/releases/download/v0.4.0/a12s_0.4.0_darwin_arm64.tar.gz"
-      sha256 "8c57cd4d41a2d98a47124b7006f078cc0d49b72703be56f6cf7083c9562afc5b"
+      url "https://github.com/coltonkirsten/a12s/releases/download/v0.4.1/a12s_0.4.1_darwin_arm64.tar.gz"
+      sha256 "561d4e24fc4163381e19d6b5666148e4bcb244c0b55f516fde5d03913c825aff"
 
       define_method(:install) do
         bin.install "a12s"
@@ -29,15 +29,15 @@ class A12s < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coltonkirsten/a12s/releases/download/v0.4.0/a12s_0.4.0_linux_amd64.tar.gz"
-      sha256 "c232227ad98a5d5205e13d615022c69ff31576edeaea0a70006e1be1b2ca85f1"
+      url "https://github.com/coltonkirsten/a12s/releases/download/v0.4.1/a12s_0.4.1_linux_amd64.tar.gz"
+      sha256 "848e2bba1da497431f99be20eba87ec441a2994cd10c2bcd77a7b09544b1710d"
       define_method(:install) do
         bin.install "a12s"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coltonkirsten/a12s/releases/download/v0.4.0/a12s_0.4.0_linux_arm64.tar.gz"
-      sha256 "269f1ae29168763fd37a5e38abc74c544a9113e0b2e30dc796ca743e3d02200c"
+      url "https://github.com/coltonkirsten/a12s/releases/download/v0.4.1/a12s_0.4.1_linux_arm64.tar.gz"
+      sha256 "7846942ed4cc3c47d756360464dc54f7ec1cfbd9409f9056f03659003294e2b9"
       define_method(:install) do
         bin.install "a12s"
       end
