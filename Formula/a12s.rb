@@ -5,21 +5,21 @@
 class A12s < Formula
   desc "Agent computers on Docker, declared in one Fleet file"
   homepage "https://github.com/coltonkirsten/a12s"
-  version "0.12.1"
+  version "0.13.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/coltonkirsten/a12s/releases/download/v0.12.1/a12s_0.12.1_darwin_amd64.tar.gz"
-      sha256 "a75e96f7a787ec82ddadb1e2a9e20e9f3c18252b20def092568e771258fbc3d8"
+      url "https://github.com/coltonkirsten/a12s/releases/download/v0.13.0/a12s_0.13.0_darwin_amd64.tar.gz"
+      sha256 "fb9f7d70a55f2539af2b34d8e4a53f3fa11295ce33045b731b897ad0ea709ffc"
 
       define_method(:install) do
         bin.install "a12s"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/coltonkirsten/a12s/releases/download/v0.12.1/a12s_0.12.1_darwin_arm64.tar.gz"
-      sha256 "4e7c4243f0baa9a15bb58ab56ef07282edc404fbe814d777a977eb524474b49b"
+      url "https://github.com/coltonkirsten/a12s/releases/download/v0.13.0/a12s_0.13.0_darwin_arm64.tar.gz"
+      sha256 "566eb2b81799cecbd7b9addbaf18bd49056349be2db32014dd31df8912e12e04"
 
       define_method(:install) do
         bin.install "a12s"
@@ -29,15 +29,15 @@ class A12s < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coltonkirsten/a12s/releases/download/v0.12.1/a12s_0.12.1_linux_amd64.tar.gz"
-      sha256 "30863ca71b8c0b77a5d1daaa970e5bd47e8a529ff17320beb81f18d28d501cdd"
+      url "https://github.com/coltonkirsten/a12s/releases/download/v0.13.0/a12s_0.13.0_linux_amd64.tar.gz"
+      sha256 "0b668399b6482390c0f7d993ddde3159568aa5d55a9a4b48d25d4f61f20665aa"
       define_method(:install) do
         bin.install "a12s"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/coltonkirsten/a12s/releases/download/v0.12.1/a12s_0.12.1_linux_arm64.tar.gz"
-      sha256 "bbb8bfd5729b2e15369336498ae2d916d6951a192fc39f0c3c32088c813f36e8"
+      url "https://github.com/coltonkirsten/a12s/releases/download/v0.13.0/a12s_0.13.0_linux_arm64.tar.gz"
+      sha256 "76137b727e30e680b8135b53bb0aa1985fce50081be471c5676b47c76062bdbf"
       define_method(:install) do
         bin.install "a12s"
       end
